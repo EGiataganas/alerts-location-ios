@@ -28,6 +28,30 @@
     [self.locationManager startUpdatingLocation];
 }
 
+-(void)checkStatus{
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+
+    if (status==kCLAuthorizationStatusNotDetermined) {
+        _status.text = @"Not Determined";
+    }
+
+    if (status==kCLAuthorizationStatusDenied) {
+        _status.text = @"Denied";
+    }
+
+    if (status==kCLAuthorizationStatusRestricted) {
+        _status.text = @"Restricted";
+    }
+
+    if (status==kCLAuthorizationStatusAuthorizedAlways) {
+        _status.text = @"Always Allowed";
+    }
+
+    if (status==kCLAuthorizationStatusAuthorizedWhenInUse) {
+        _status.text = @"When In Use Allowed";
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
