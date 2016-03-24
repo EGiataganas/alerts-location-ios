@@ -62,4 +62,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)goToSettings:(id)sender {
+    NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    [[UIApplication sharedApplication]openURL:settingsURL];
+}
+
 @end
