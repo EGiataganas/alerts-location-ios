@@ -33,6 +33,28 @@
                                                 userInfo:nil repeats:YES];
 }
 
+-(void)requestAlwaysAuth{
+
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+
+    if (status==kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusDenied) {
+
+        NSString*title;
+
+        title=(status == kCLAuthorizationStatusDenied) ? @"Location Services Are Off" : @"Background use is not enabled";
+
+        NSString *message = @"Go to settings";
+
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:title message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Settings", nil];
+
+        [alert show];
+
+    }else if (status==kCLAuthorizationStatusNotDetermined)
+
+    {[self.locationManager requestAlwaysAuthorization];}
+
+}
+
 -(void)checkStatus{
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
 
