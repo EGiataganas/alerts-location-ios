@@ -100,4 +100,10 @@
     [[UIApplication sharedApplication]openURL:settingsURL];
 }
 
+- (IBAction)changAuth:(id)sender{
+    NSLog(@"Trying to change to ALWAYS authorization");
+    [self requestAlwaysAuth];
+
+}
+
 @end
