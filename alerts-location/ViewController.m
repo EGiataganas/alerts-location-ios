@@ -17,6 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _locationManager =[[CLLocationManager alloc]init];
+
+    // Use either one of these authorizations **The top one gets called first and the other gets ignored
+
+    [self.locationManager requestWhenInUseAuthorization];
+
+    //[self.locationManager requestAlwaysAuthorization];
+
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning {
