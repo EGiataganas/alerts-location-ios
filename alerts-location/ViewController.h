@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *status;
 @property(nonatomic)CLLocationManager *locationManager;
 @property(nonatomic)NSTimer *timer;
+- (IBAction)changAuth:(id)sender;
 
 @end
 
