@@ -15,6 +15,8 @@
 		FDEC1EDE1CA3E5140069DF74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEC1EDC1CA3E5140069DF74 /* LaunchScreen.storyboard */; };
 		FDEC1EE91CA3E5150069DF74 /* alerts_locationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC1EE81CA3E5150069DF74 /* alerts_locationTests.m */; };
 		FDEC1EF41CA3E5150069DF74 /* alerts_locationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC1EF31CA3E5150069DF74 /* alerts_locationUITests.m */; };
+		FDEC1F021CA3E6040069DF74 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEC1F011CA3E6040069DF74 /* MapKit.framework */; };
+		FDEC1F041CA3E6170069DF74 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEC1F031CA3E6170069DF74 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		FDEC1EEF1CA3E5150069DF74 /* alerts-locationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "alerts-locationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEC1EF31CA3E5150069DF74 /* alerts_locationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = alerts_locationUITests.m; sourceTree = "<group>"; };
 		FDEC1EF51CA3E5150069DF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDEC1F011CA3E6040069DF74 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FDEC1F031CA3E6170069DF74 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEC1F041CA3E6170069DF74 /* CoreLocation.framework in Frameworks */,
+				FDEC1F021CA3E6040069DF74 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,8 @@
 		FDEC1EC21CA3E5140069DF74 = {
 			isa = PBXGroup;
 			children = (
+				FDEC1F031CA3E6170069DF74 /* CoreLocation.framework */,
+				FDEC1F011CA3E6040069DF74 /* MapKit.framework */,
 				FDEC1ECD1CA3E5140069DF74 /* alerts-location */,
 				FDEC1EE71CA3E5150069DF74 /* alerts-locationTests */,
 				FDEC1EF21CA3E5150069DF74 /* alerts-locationUITests */,
