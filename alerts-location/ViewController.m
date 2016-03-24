@@ -55,6 +55,17 @@
 
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+
+    if (buttonIndex == 1) {
+
+        NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+
+        [[UIApplication sharedApplication]openURL:settingsURL];
+
+    }
+}
+
 -(void)checkStatus{
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
 
