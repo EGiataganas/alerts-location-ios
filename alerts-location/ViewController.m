@@ -26,6 +26,11 @@
     //[self.locationManager requestAlwaysAuthorization];
 
     [self.locationManager startUpdatingLocation];
+
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                  target:self
+                                                selector:@selector(checkStatus)
+                                                userInfo:nil repeats:YES];
 }
 
 -(void)checkStatus{
