@@ -12,6 +12,11 @@
 
 @interface ViewController : UIViewController<CLLocationManagerDelegate>
 
+- (IBAction)goToSettings:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *status;
+@property(nonatomic)CLLocationManager *locationManager;
+@property(nonatomic)NSTimer *timer;
 
 @end
 
